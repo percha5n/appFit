@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">appFit</string>
+    <string name="male">hombre</string>
+    <string name="female">mujer</string>
+    <string name="height">altura</string>
+    <string name="weight">peso</string>
+    <string name="age">edad</string>"
+    <string name="calculate">calcular</string>
+    <string name="reCalculated">Re-Calcular</string>
+    <string name="result">Tu resultado</string>
+    <string name="calculatedIMC">Calcular el IMC</string>
+
+    <string name="error">Error</string>
+
+    <string name="title_bajo_peso">bajo peso</string>
+    <string name="description_bajo_peso">Estas por debajo de tu peso segun tu altura y tamaño</string>
+
+    <string name="title_peso_normal">normal</string>
+    <string name="description_peso_normal">Estas en lo optimo para tu peso segun tu altura y tamaño</string>
+
+    <string name="title_sobrepeso">sobrepeso</string>
+    <string name="description_sobrepeso">estas por encima de lo optimo para tu peso y altura</string>
+
+    <string name="title_obesidad">obesidad</string>
+    <string name="description_obesidad">Estas muy por encima de lo optimo para tu peso y altura</string>
+
+</resources>
