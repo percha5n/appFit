@@ -23,6 +23,8 @@ class Registrarse : AppCompatActivity() {
     private lateinit var confirmarContraseniaTextInputEditText: TextInputEditText
     private lateinit var btnReg: MaterialButton
     private lateinit var btnAtras: MaterialButton
+    private lateinit var regPhone: TextInputLayout
+    private lateinit var textEditPhone: TextInputEditText
 
     private lateinit var firebaseAuth: FirebaseAuth
 
@@ -75,6 +77,7 @@ class Registrarse : AppCompatActivity() {
         nomEmailEditText.setTextColor(ContextCompat.getColor(this,R.color.white))
         contraseniaTextInputEditText.setTextColor(ContextCompat.getColor(this,R.color.white))
         confirmarContraseniaTextInputEditText.setTextColor(ContextCompat.getColor(this,R.color.white))
+        textEditPhone.setTextColor(ContextCompat.getColor(this, R.color.white))
     }
 
     private fun iniciarComponentes(){
@@ -86,6 +89,8 @@ class Registrarse : AppCompatActivity() {
         confirmarContraseniaTextInputEditText = findViewById(R.id.confirmarContraseniaTextInputEditText)
         btnReg = findViewById(R.id.btnReg)
         btnAtras = findViewById(R.id.btnAtras)
+        textEditPhone = findViewById(R.id.textEditPhone)
+        regPhone = findViewById(R.id.regPhone)
 
         firebaseAuth = FirebaseAuth.getInstance()
     }
