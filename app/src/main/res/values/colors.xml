@@ -22,4 +22,6 @@
     <color name="peso_sobrepeso">#FF5722</color>
     <color name="peso_obesidad">#7E331B</color>
 
+    <color name="red_HARD">#FF0000</color>
+
 </resources>

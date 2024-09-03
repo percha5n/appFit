@@ -24,4 +24,23 @@
     <string name="title_obesidad">obesidad</string>
     <string name="description_obesidad">Estas muy por encima de lo optimo para tu peso y altura</string>
 
+
+    <!--   lOGIN    -->
+
+    <string name="login">Login</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="register">Registrate</string>
+
+    <!--   LOGICA DEL LOGIN   -->
+    <string name="msgError">Usuario o contraseña incorrectos</string>
+
+    <!--  REGISTRO  -->
+    <string name="registro">Registrarse</string>
+    <string name="registrate">Registrate</string>
+    <string name="correo">Example@gmail.com</string>
+    <string name="regname">Nombre</string>
+    <string name="reg_apellido">Apellido</string>
+
+
 </resources>

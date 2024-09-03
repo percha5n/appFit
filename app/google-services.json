@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "807850485818",
+    "project_id": "appfit-ee254",
+    "storage_bucket": "appfit-ee254.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807850485818:android:a8c5bcccf5ed19d2896d03",
+        "android_client_info": {
+          "package_name": "com.ezzz3.appfit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl2hjvSxOC5UMmWxy0_8hSmWjycGaNN5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

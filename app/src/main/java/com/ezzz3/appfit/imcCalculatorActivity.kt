@@ -56,7 +56,7 @@ class imcCalculatorActivity : AppCompatActivity() {
 
     }
 
-    //declaracion de las cunciones
+    //declaracion de las funciones
     private fun initComponents() {
         viewMale = findViewById(R.id.viewMale)
         viewFemale = findViewById(R.id.viewFemale)

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:background="@color/background_app"
-    android:padding="16dp">
+    tools:context=".Registrarse">
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tvLogin"
+        android:id="@+id/regTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="66dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/login"
+        android:text="@string/registro"
         android:textColor="@color/title_text"
         android:textSize="24sp"
         android:textAllCaps="true"
@@ -27,27 +27,28 @@
     </com.google.android.material.textview.MaterialTextView>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailTextInputLayout"
+        android:id="@+id/regEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="16dp"
         android:hint="@string/correo"
         android:text="@string/correo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogin"
-        app:startIconDrawable="@drawable/logo_persona_login">
+        app:layout_constraintTop_toBottomOf="@+id/regApellidoLayout"
+        app:startIconDrawable="@drawable/email">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/nomEmailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="text"
+            android:maxLength="41"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/contraseniaTextInputLayout"
+        android:id="@+id/regClaveLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -55,14 +56,15 @@
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextInputLayout"
-        app:startIconDrawable="@drawable/baseline_edit_24">
+        app:layout_constraintTop_toBottomOf="@+id/regEmail"
+        app:startIconDrawable="@drawable/baseline_password_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/contraseniaEditText"
+            android:id="@+id/contraseniaTextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:maxLength="25"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,35 +80,58 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contraseniaTextInputLayout" />
+        app:layout_constraintTop_toBottomOf="@id/regClaveLayout" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnReg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:backgroundTint="@color/background_component"
-        android:text="@string/login"
-        app:icon="@drawable/entrar"
+        android:text="@string/registrate"
+        app:icon="@drawable/logo_btn_registroo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/errorTextView" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnRegistrarse"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/regNombreLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/register"
+        android:layout_marginTop="26dp"
+        android:hint="@string/regname"
+        android:text="@string/regname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:icon="@drawable/register"
+        android:layout_marginEnd="215dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/background_fab"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/regTitle">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/regNombreEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="15"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/regApellidoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:hint="@string/reg_apellido"
+        android:text="@string/reg_apellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/regNombreLayout"
+        app:layout_constraintTop_toBottomOf="@+id/regTitle"
+        android:layout_marginStart="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regApellidoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="15"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--
-    -wrap_content: Se ajusta al contenido.
-    -match_parent: Ocupa todo el espacio disponible.
-    -->
