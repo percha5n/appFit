@@ -76,8 +76,7 @@ class MenuActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = firebaseAuth.currentUser
-                    //borrar cuando se muestra la key de usuario
-                    Toast.makeText(baseContext, user?.uid.toString(), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, "Authentication Exitosa", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, imcCalculatorActivity::class.java)
                     startActivity(intent)
                 } else {

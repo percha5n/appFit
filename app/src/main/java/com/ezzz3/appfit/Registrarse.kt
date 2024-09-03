@@ -50,19 +50,19 @@ class Registrarse : AppCompatActivity() {
                 contraseniaTextInputEditText.requestFocus()
             }
 
-            btnAtras.setOnClickListener{
-                atras()
-            }
 
         }
     }
     //meter el nombre y apellido para crear la cuenta y registrarlo en la base de datos
-    private fun crearCuenta(email: String, password: String){
+    private fun crearCuenta(email: String, password: String,){
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this){
             task ->
             if(task.isSuccessful){ //validar que el email y pass no sea null
                 Toast.makeText(baseContext, "Cuenta creada", Toast.LENGTH_SHORT).show()
                 //poner para que salga del activiti y se pueda logear
+                btnAtras.setOnClickListener{
+                    atras()
+                }
             }else{
                 Toast.makeText(baseContext, "algo salio mal,Error" + task.exception, Toast.LENGTH_SHORT).show()
             }
