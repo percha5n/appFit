@@ -41,6 +41,6 @@
     <string name="correo">Example@gmail.com</string>
     <string name="regname">Nombre</string>
     <string name="reg_apellido">Apellido</string>
-
+<string name="confirmar_contraseña">Confirmar Contraseña</string>
 
 </resources>

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="20dp"
     android:background="@color/background_app"
     tools:context=".Registrarse">
 
@@ -33,6 +33,7 @@
         android:layout_marginTop="16dp"
         android:hint="@string/correo"
         android:text="@string/correo"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regApellidoLayout"
@@ -42,9 +43,9 @@
             android:id="@+id/nomEmailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:maxLength="41"/>
-
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -68,6 +69,27 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirmarRegClaveLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/confirmar_contraseña"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regClaveLayout"
+        app:startIconDrawable="@drawable/baseline_password_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirmarContraseniaTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="25"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/errorTextView"
         android:layout_width="wrap_content"
@@ -80,7 +102,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/regClaveLayout" />
+        app:layout_constraintTop_toBottomOf="@id/confirmarRegClaveLayout" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnReg"
@@ -99,18 +121,18 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
+        android:layout_marginEnd="215dp"
         android:hint="@string/regname"
         android:text="@string/regname"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="215dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regTitle">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/regNombreEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxLength="15"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regNombreEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="15" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -133,5 +155,16 @@
             android:maxLength="15"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAtras"
+        android:layout_width="72dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="147dp"
+        android:backgroundTint="@color/background_component"
+        app:icon="@drawable/atras"
+        app:layout_constraintBottom_toBottomOf="@+id/regNombreLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

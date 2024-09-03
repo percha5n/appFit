@@ -41,8 +41,13 @@ class MenuActivity : AppCompatActivity() {
         cambiarColorDelTexto()
 
         btnlogin.setOnClickListener {
-            if(firebaseAuth.currentUser != null){
-                navegacionDelImcApp()
+            val email = emailEditText.text.toString()
+            val password = contraseniaEditText.text.toString()
+
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                signIn(email, password)
+            } else {
+                errorTextView.text = "Por favor, completa todos los campos."
             }
         }
 
@@ -71,6 +76,7 @@ class MenuActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = firebaseAuth.currentUser
+                    //borrar cuando se muestra la key de usuario
                     Toast.makeText(baseContext, user?.uid.toString(), Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, imcCalculatorActivity::class.java)
                     startActivity(intent)
