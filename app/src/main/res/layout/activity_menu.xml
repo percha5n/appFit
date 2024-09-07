@@ -16,9 +16,9 @@
         android:layout_marginTop="66dp"
         android:layout_marginBottom="16dp"
         android:text="@string/login"
+        android:textAllCaps="true"
         android:textColor="@color/title_text"
         android:textSize="24sp"
-        android:textAllCaps="true"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,6 +30,7 @@
         android:id="@+id/emailTextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:layout_marginTop="26dp"
         android:hint="@string/correo"
         android:text="@string/correo"
@@ -50,6 +51,7 @@
         android:id="@+id/contraseniaTextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:layout_marginTop="16dp"
         android:hint="@string/password"
         app:endIconMode="password_toggle"
@@ -82,8 +84,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="266dp"
+        android:layout_height="47dp"
         android:layout_margin="16dp"
         android:backgroundTint="@color/background_component"
         android:text="@string/login"
@@ -94,14 +96,14 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRegistrarse"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:icon="@drawable/register"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="266dp"
+        android:layout_height="46dp"
         android:layout_margin="16dp"
         android:backgroundTint="@color/background_fab"
+        android:text="@string/register"
+        app:icon="@drawable/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

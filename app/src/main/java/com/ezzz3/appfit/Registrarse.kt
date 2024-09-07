@@ -19,12 +19,13 @@ class Registrarse : AppCompatActivity() {
     private lateinit var regNombreEditText: TextInputEditText
     private lateinit var regApellidoEditText: TextInputEditText
     private lateinit var nomEmailEditText: TextInputEditText
-    private lateinit var contraseniaTextInputEditText: TextInputEditText
+    private lateinit var contrasenia : TextInputEditText
     private lateinit var confirmarContraseniaTextInputEditText: TextInputEditText
     private lateinit var btnReg: MaterialButton
     private lateinit var btnAtras: MaterialButton
     private lateinit var regPhone: TextInputLayout
     private lateinit var textEditPhone: TextInputEditText
+    private lateinit var btnOlvidar: MaterialButton
 
     private lateinit var firebaseAuth: FirebaseAuth
 
@@ -42,18 +43,21 @@ class Registrarse : AppCompatActivity() {
         cambiarColorDelTexto()
 
         btnReg.setOnClickListener(){
-            var pass1 = contraseniaTextInputEditText.text.toString()
+            var pass1 = contrasenia.text.toString()
             var pass2 = confirmarContraseniaTextInputEditText.text.toString()
 
             if(pass1.equals(pass2)){
-                 crearCuenta(nomEmailEditText.text.toString(),contraseniaTextInputEditText.text.toString())
+                 crearCuenta(nomEmailEditText.text.toString(),contrasenia.text.toString())
             } else{
                 Toast.makeText(baseContext, "Error: las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
-                contraseniaTextInputEditText.requestFocus()
+                contrasenia.requestFocus()
             }
-
-
         }
+
+        btnOlvidar.setOnClickListener(){
+            navegarolvideContra()
+        }
+
     }
     //meter el nombre y apellido para crear la cuenta y registrarlo en la base de datos
     private fun crearCuenta(email: String, password: String,){
@@ -75,7 +79,7 @@ class Registrarse : AppCompatActivity() {
         regNombreEditText.setTextColor(ContextCompat.getColor(this, R.color.white))
         regApellidoEditText.setTextColor(ContextCompat.getColor(this,R.color.white))
         nomEmailEditText.setTextColor(ContextCompat.getColor(this,R.color.white))
-        contraseniaTextInputEditText.setTextColor(ContextCompat.getColor(this,R.color.white))
+        contrasenia.setTextColor(ContextCompat.getColor(this,R.color.white))
         confirmarContraseniaTextInputEditText.setTextColor(ContextCompat.getColor(this,R.color.white))
         textEditPhone.setTextColor(ContextCompat.getColor(this, R.color.white))
     }
@@ -85,18 +89,24 @@ class Registrarse : AppCompatActivity() {
         regNombreEditText = findViewById(R.id.regNombreEditText)
         regApellidoEditText = findViewById(R.id.regApellidoEditText)
         nomEmailEditText = findViewById(R.id.nomEmailEditText)
-        contraseniaTextInputEditText = findViewById(R.id.contraseniaTextInputEditText)
+        contrasenia = findViewById(R.id.contraseniaTextInputEditText)
         confirmarContraseniaTextInputEditText = findViewById(R.id.confirmarContraseniaTextInputEditText)
         btnReg = findViewById(R.id.btnReg)
         btnAtras = findViewById(R.id.btnAtras)
         textEditPhone = findViewById(R.id.textEditPhone)
         regPhone = findViewById(R.id.regPhone)
+        btnOlvidar = findViewById(R.id.btnOlvidar)
 
         firebaseAuth = FirebaseAuth.getInstance()
     }
 
     private fun atras() {
         val intent = Intent(this, MenuActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navegarolvideContra(){
+        val intent = Intent(this, RecuperarClaveActivity::class.java)
         startActivity(intent)
     }
 

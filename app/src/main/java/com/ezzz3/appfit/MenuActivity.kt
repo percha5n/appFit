@@ -80,7 +80,7 @@ class MenuActivity : AppCompatActivity() {
                     val intent = Intent(this, imcCalculatorActivity::class.java)
                     startActivity(intent)
                 } else {
-                    Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, "Authentication Fallida.", Toast.LENGTH_SHORT).show()
                 }
             }
     }

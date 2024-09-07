@@ -13,11 +13,13 @@
         android:theme="@style/Theme.AppFit"
         tools:targetApi="31">
         <activity
+            android:name=".RecuperarClaveActivity"
+            android:exported="false" />
+        <activity
             android:name=".usuarioActivity"
             android:exported="false"
             android:label="@string/title_activity_usuario"
-            android:theme="@style/Theme.AppFit.NoActionBar" />
-        <!-- Actividades de la aplicación -->
+            android:theme="@style/Theme.AppFit.NoActionBar" /> <!-- Actividades de la aplicación -->
         <activity
             android:name=".Registrarse"
             android:exported="false" />
